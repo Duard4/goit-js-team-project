@@ -7,6 +7,9 @@
   padding: 20px;
   height: 64px;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 .header-logo {
   font-family: 'Impact', sans-serif;
@@ -113,7 +116,7 @@ input:checked + .move-span::after {
 
   .nav-list {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -124,7 +127,7 @@ input:checked + .move-span::after {
 
   .nav-container {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     margin-left: auto;
   }
 
