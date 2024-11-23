@@ -1,7 +1,9 @@
 import axios from 'axios';
 import Swiper from 'swiper';
 import { Keyboard, Navigation } from 'swiper/modules';
+import 'swiper/css';
 import 'swiper/css/keyboard';
+import 'swiper/css/navigation';
 
 const BASE_URL = 'https://portfolio-js.b.goit.study/api/reviews';
 
@@ -11,8 +13,6 @@ const reviewsList = document.querySelector('.reviews-list');
 export function reviewsSection() {
   const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
-    spaceBetween: 32,
-    breakpointsBase: 'container',
     // Install modules
     modules: [Keyboard, Navigation],
     speed: 500,
@@ -24,10 +24,12 @@ export function reviewsSection() {
       // when window width is >= 320px
       320: {
         slidesPerView: 1,
+        spaceBetween: 32,
       },
       // when window width is >= 768px
       768: {
         slidesPerView: 1,
+        spaceBetween: 32,
       },
       // when window width is >= 1280px
       1280: {
@@ -72,21 +74,20 @@ function renderFunction(reviews) {
     .map(
       ({ author, avatar_url, review, _id }) =>
         `<li class="swiper-slide" id="${_id}">
-         <div class="card-content">
            <p class="card-text">${review}</p>
            <div class="card-person-info">
              <img class="card-avatar" src="${avatar_url}" alt="${author}" width="40" height="40"/>
              <p class="card-author">${author}</p>
            </div>
-         </div>
        </li> `
     )
     .join('');
 }
 
 function renderError() {
-  const markupError = `<li class="swiper-slide">
-  <p class="text-error">Not found</p>
+  const markupError = `<li class="swiper-slide error-styles">
+  <h2 class="error-code">404</h2>
+  <p class="error-text">Not found</p>
   </li>`;
   reviewsList.innerHTML = markupError;
 }
