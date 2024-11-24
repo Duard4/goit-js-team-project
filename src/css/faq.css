@@ -20,30 +20,87 @@
     color: #00b068;
 }
 
-.sub-title-btn {
+.accordion-item {
     display: flex;
-    gap: 16px;
+    flex-direction: column;
+    gap: 24px;
+    border-bottom: 1px solid #e4e5e6;
+        padding: 28px 24px;
+        /* border-radius: 16px;
+        background: #bcdfd1; */
 }
 
+
+
 .accordion-btn {
-    background: #f9f9f9;
+    /* background: #f9f9f9;
         border: 1px solid #ddd;
         padding: 16px;
         font-size: 16px;
         font-weight: bold;
-        cursor: pointer;
+        cursor: pointer; */
+
+        display: flex;
+            background: none;
+            flex-shrink: 0;
+            /* margin-left: 44px; */
+            padding: 0;
+            width: 34px;
+            height: 34px;
+            align-items: center;
+            border: none;
+            /* border: 1px solid var(--lgr); */
+            border-radius: 100px;
+            padding: 7px;
+            cursor: pointer;
     
 }
 
-.btn-open {
+.faq-btn-close {
+    
     font-weight: 300;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.03em;
-        color: #292929;
+        
+    
+        display: inline-block;
+        stroke: #292929;
+        fill: transparent;
 }
 
-.faq-subtitle {
+.faq-btn-open {
+    display: none;
+
+    font-weight: 300;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.03em;
+        
+
+        /* display: inline-block; */
+            stroke: #292929;
+            fill: transparent;
+}
+
+.accordion-item.active {
+    border-radius: 16px;
+        background: #bcdfd1;
+}
+
+
+.accordion-item.active .faq-btn-open {
+    display: none;
+}
+
+.accordion-item.active .faq-btn-close {
+    display: inline-block;
+}
+
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+        gap: 16px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
         font-size: 18px;
@@ -60,4 +117,17 @@
         line-height: 1.5;
         letter-spacing: 0.03em;
         color: #292929;
+
+        max-height: 0;
+            /* margin-top: 16px; */
+            /* color: rgba(250, 250, 250, 0.6); */
+            opacity: 0;
+            overflow: hidden;
+            transition-property: opacity, max-height;
+            transition: opacity 0.3s ease 0.1s, max-height 0.5s ease 0s;
+}
+
+.accordion-item .active .accordion-content {
+    max-height: 500px;
+    opacity: 1;
 }
