@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 :root {
   /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -14,6 +16,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --white: #f0f0f0;
+  --black: #292929;
+  --light-grey: #e4e5e6;
+  --hover-grey: #bbbbbb;
+  --accet-green: #00b068;
+  --hover-green: #009156;
+  --light-accet: #bcdfd1;
+  --error: #e74a3b;
 }
 
 body {
@@ -22,11 +33,14 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 main {
   flex-grow: 1;
 }
-main:has(.back-link) {
-  text-align: center;
+
+@font-face {
+  font-family: 'Impact';
+  src: url('../fonts/impact.ttf') format('truetype');
 }
