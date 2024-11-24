@@ -26,6 +26,7 @@
 li.swiper-slide {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: auto;
   border-radius: 16px;
   padding: 32px;
