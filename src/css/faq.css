@@ -1,5 +1,5 @@
 .faq-section {
-    max-width: 375px;
+    max-width: 360px;
         min-width: 320px;
         margin: 0 auto;
         padding: 0 20px;
@@ -16,14 +16,14 @@
         text-transform: uppercase;
         color: #292929;
 }
-.fag-title-highlight {
+.faq-title-highlight {
     color: #00b068;
 }
 
-.accordion-item {
+.faq-item {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    /* gap: 24px; */
     border-bottom: 1px solid #e4e5e6;
         padding: 28px 24px;
         /* border-radius: 16px;
@@ -32,13 +32,8 @@
 
 
 
-.accordion-btn {
-    /* background: #f9f9f9;
-        border: 1px solid #ddd;
-        padding: 16px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer; */
+.faq-btn {
+    
 
         display: flex;
             background: none;
@@ -83,17 +78,17 @@
             fill: transparent;
 }
 
-.accordion-item.active {
+.faq-item.active {
     border-radius: 16px;
         background: #bcdfd1;
 }
 
 
-.accordion-item.active .faq-btn-open {
+.faq-item.active .faq-btn-open {
     display: none;
 }
 
-.accordion-item.active .faq-btn-close {
+.faq-item.active .faq-btn-close {
     display: inline-block;
 }
 
@@ -110,7 +105,7 @@
         color: #292929;
 }
 
-.accordion-content {
+.faq-content {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
         font-size: 16px;
@@ -127,7 +122,72 @@
             transition: opacity 0.3s ease 0.1s, max-height 0.5s ease 0s;
 }
 
-.accordion-item .active .accordion-content {
+.faq-item .active .faq-content {
     max-height: 500px;
     opacity: 1;
+}
+
+
+@media screen and (min-width: 768px) {
+    .faq-section {
+        max-width: 768px;
+        padding: 0 32px;
+    }
+
+    .faq-title {
+        
+            font-size: 108px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #292929;
+    }
+
+        .faq-item {
+
+        }
+
+        .faq-header {
+            font-size: 20px;
+        }
+
+        .faq-content {
+            font-weight: 300;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0.03em;
+                color: #292929;
+        }
+}
+
+
+@media screen and (min-width: 1280px) {
+    .faq-section {
+        max-width: 1280px;
+    }
+
+    .faq-title {
+        display: block;
+        max-width: 520px;
+    }
+    .faq-header {
+        
+    }
+    .faq-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 592px;
+        /* height: 744px; */
+        margin-top: -96px;
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+    }
+
+    .faq-container {
+        
+        
+    }
+
 }

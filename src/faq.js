@@ -12,12 +12,12 @@ import "accordion-js/dist/accordion.min.css";
 //
 
 document.addEventListener("DOMContentLoaded", () => {
-    const accordionItems = document.querySelectorAll(".accordion-item");
+    const faqItems = document.querySelectorAll(".faq-item");
 
-    accordionItems.forEach((item) => {
+    faqItems.forEach((item) => {
         const header = item.querySelector(".faq-header");
-        const button = item.querySelector(".accordion-btn");
-        const content = item.querySelector(".accordion-content");
+        const button = item.querySelector(".faq-btn");
+        const content = item.querySelector(".faq-content");
         const openIcon = button.querySelector(".faq-btn-close");
         const closeIcon = button.querySelector(".faq-btn-open");
 
@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         header.addEventListener("click", () => {
             // Закриття всіх інших елементів
-            accordionItems.forEach((otherItem) => {
+            faqItems.forEach((otherItem) => {
                 if (otherItem !== item && otherItem.classList.contains("active")) {
                     otherItem.classList.remove("active");
-                    const otherContent = otherItem.querySelector(".accordion-content");
-                    const otherButton = otherItem.querySelector(".accordion-btn");
+                    const otherContent = otherItem.querySelector(".faq-content");
+                    const otherButton = otherItem.querySelector(".faq-btn");
                     const otherOpenIcon = otherButton.querySelector(".faq-btn-open");
                     const otherCloseIcon = otherButton.querySelector(".faq-btn-close");
 
@@ -69,10 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Відкриття першого елемента за замовчуванням
-    const firstItem = accordionItems[0];
+    const firstItem = faqItems[0];
     if (firstItem) {
-        const firstContent = firstItem.querySelector(".accordion-content");
-        const firstButton = firstItem.querySelector(".accordion-btn");
+        const firstContent = firstItem.querySelector(".faq-content");
+        const firstButton = firstItem.querySelector(".faq-btn");
         const firstOpenIcon = firstButton.querySelector(".faq-btn-open");
         const firstCloseIcon = firstButton.querySelector(".faq-btn-close");
 
