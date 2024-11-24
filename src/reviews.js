@@ -4,6 +4,8 @@ import { Keyboard, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/keyboard';
 import 'swiper/css/navigation';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const BASE_URL = 'https://portfolio-js.b.goit.study/api/reviews';
 
@@ -59,11 +61,16 @@ export async function fetchReviews() {
   } catch (error) {
     if (error) {
       renderError();
+      iziToast.error({
+        title: '404 Error',
+        message: 'The requested URL was not found.',
+        position: 'bottomCenter',
+      });
     } else {
       iziToast.error({
         title: 'Error',
         message: 'An error occurred while loading data.',
-        position: 'topRight',
+        position: 'bottomCenter',
       });
     }
   }

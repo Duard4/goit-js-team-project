@@ -108,7 +108,7 @@ button.swiper-button-next:focus {
   stroke: var(--light-grey);
 }
 
-.error-styles {
+li.error-styles {
   align-items: center;
 }
 
@@ -124,5 +124,10 @@ button.swiper-button-next:focus {
 @media only screen and (min-width: 1280px) {
   .reviews-title {
     margin: 0 auto 80px;
+  }
+
+  li.swiper-slide.error-styles {
+    min-width: 90%;
+    margin: 0 auto;
   }
 }
