@@ -23,11 +23,9 @@
 .faq-item {
     display: flex;
     flex-direction: column;
-    /* gap: 24px; */
     border-bottom: 1px solid #e4e5e6;
-        padding: 28px 24px;
-        /* border-radius: 16px;
-        background: #bcdfd1; */
+    padding: 28px 24px;
+        
 }
 
 
@@ -38,13 +36,13 @@
         display: flex;
             background: none;
             flex-shrink: 0;
-            /* margin-left: 44px; */
+            
             padding: 0;
             width: 34px;
             height: 34px;
             align-items: center;
             border: none;
-            /* border: 1px solid var(--lgr); */
+            
             border-radius: 100px;
             padding: 7px;
             cursor: pointer;
@@ -71,11 +69,8 @@
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.03em;
-        
-
-        /* display: inline-block; */
-            stroke: #292929;
-            fill: transparent;
+        stroke: #292929;
+        fill: transparent;
 }
 
 .faq-item.active {
@@ -103,6 +98,7 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #292929;
+        cursor: pointer;
 }
 
 .faq-content {
@@ -112,14 +108,11 @@
         line-height: 1.5;
         letter-spacing: 0.03em;
         color: #292929;
-
         max-height: 0;
-            /* margin-top: 16px; */
-            /* color: rgba(250, 250, 250, 0.6); */
-            opacity: 0;
-            overflow: hidden;
-            transition-property: opacity, max-height;
-            transition: opacity 0.3s ease 0.1s, max-height 0.5s ease 0s;
+        opacity: 0;
+        overflow: hidden;
+        transition-property: opacity, max-height;
+        transition: opacity 0.3s ease 0.1s, max-height 0.5s ease 0s;
 }
 
 .faq-item .active .faq-content {
@@ -170,15 +163,12 @@
         display: block;
         max-width: 520px;
     }
-    .faq-header {
-        
-    }
+    
     .faq-list {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         width: 592px;
-        /* height: 744px; */
         margin-top: -96px;
         margin-right: 0;
         margin-bottom: 0;
@@ -190,4 +180,12 @@
         
     }
 
+    .green-decor {
+        background-image: image-set(url('../img/decor-bg-4des.jpg') 1x, url('../img/decor-bg-4-2xdes.jpg') 2x);
+            
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            
+    }
+        
 }

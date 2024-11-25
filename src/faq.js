@@ -1,16 +1,6 @@
 import Accordion from "accordion-js";
 import "accordion-js/dist/accordion.min.css";
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   new Accordion(".accordion", {
-//     duration: 300,
-//     showMultiple: false,
-//     openOnInit: [0],
-//   });
-// });
-
-//
-
 document.addEventListener("DOMContentLoaded", () => {
     const faqItems = document.querySelectorAll(".faq-item");
 
@@ -43,8 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     otherContent.style.maxHeight = "0";
                     otherContent.style.opacity = "0";
                     otherContent.style.overflow = "hidden";
-                    otherOpenIcon.style.display = "block";
-                    otherCloseIcon.style.display = "none";
+                    otherOpenIcon.style.display = "none";
+                    otherCloseIcon.style.display = "block";
                 }
             });
 
@@ -79,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         firstItem.classList.add("active");
         firstContent.style.maxHeight = firstContent.scrollHeight + "px";
         firstContent.style.opacity = "1";
-        firstOpenIcon.style.display = "none";
-        firstCloseIcon.style.display = "block";
+        firstOpenIcon.style.display = "block";
+        firstCloseIcon.style.display = "none";
     }
 });
